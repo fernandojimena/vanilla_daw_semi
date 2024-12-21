@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+}
+body h2 {
+    font-size: 1.6rem
+}
+.container {
+    text-align: center;
+}
+.oculto {
+    display: none;
+}
+.login {
+    margin-top: 20px;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+

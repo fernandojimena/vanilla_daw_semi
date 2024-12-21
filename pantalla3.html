@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link a css -->
+    <link rel="stylesheet" href="css/styleForm.css" />
+    <title>Pantalla 3</title>
+  </head>
+
+  <body>
+    <!-- BLOQUE 1 -->
+    <div class="container">
+      <h2>Cuestionario</h2>
+
+      <form id="cuestionarioForm">
+        <!-- Pregunta -->
+        <div>
+          <label for="pregunta">Pregunta:</label>
+          <br />
+          <textarea
+            id="pregunta"
+            name="pregunta"
+            style="width: 300px"
+            oninput="validacion()"
+          ></textarea>
+        </div>
+        <br />
+
+        <!-- Verdadero o Falso -->
+        <div>
+          <label>Verdadero</label>
+          <input
+            type="radio"
+            id="verdadero"
+            name="respuesta"
+            value="verdadero"
+            onchange="validacion()"
+          />
+          <label>Falso</label>
+          <input
+            type="radio"
+            id="falso"
+            name="respuesta"
+            value="falso"
+            onchange="validacion()"
+          />
+        </div>
+        <br />
+
+        <!-- Calificacion -->
+        <div>
+          <label for="puntuacion">Puntuación:</label>
+          <input
+            type="number"
+            id="puntuacion"
+            name="puntuacion"
+            min="0"
+            max="9"
+            maxlength="1"
+            placeholder="de 0 a 9"
+            style="width: 70px"
+            oninput="validacion()"
+          />
+        </div>
+        <br />
+
+        <!-- Botones -->
+        <div>
+          <button type="button" id="btn_atras">Atrás</button>
+          <button type="button" id="btn_grabar" disabled>Grabar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- BLOQUE 2 -->
+    <div class="container">
+      <!-- Carga de preguntas -->
+
+      <h3>Listado de Preguntas</h3>
+      <div id="preguntasList">
+        <p id="cargandoText">Cargando preguntas...</p>
+        <table id="tabla" style="display: none">
+          <thead>
+            <tr>
+              <th>Pregunta</th>
+              <th>Respuesta</th>
+              <th>Puntuación</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se llenarán las preguntas -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- link a js -->
+    <script src="scripts/actionQuestion.js"></script>
+  </body>
+</html>

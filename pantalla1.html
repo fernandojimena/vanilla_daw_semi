@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pagina 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Pantalla 1 -->
+      <div id="mensaje">
+        <h1>Bienvenido</h1>
+        <p>Pulsa Control + F10 o espera 5 segundos</p>
+      </div>
+
+      <!-- Pantalla 2 -->
+      <!-- agregar la clase oculto -->
+      <div id="formulario" class="oculto">
+        <h2>USUARIO</h2>
+        <!-- onblur para cuando se pierde el foco ya que no tenemos un boton para validar -->
+        <input
+          type="text"
+          id="email"
+          placeholder="Correo Electrónico"
+          onblur="validacion()"
+        />
+        <p id="errorMessage" class="error oculto">
+          Correo incorrecto. Por favor, inténtalo de nuevo.
+        </p>
+      </div>
+    </div>
+    <!-- Link a script -->
+    <script src="scripts/action.js"></script>
+  </body>
+</html>

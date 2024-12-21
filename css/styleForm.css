@@ -1,0 +1,30 @@
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+}
+
+.container {
+        text-align: left;
+        border: 1px solid black;
+        height: 400px;
+        width: 400px;
+        margin: 10px;
+        padding: 20px;
+}
+
+.oculto { 
+        display: none; 
+}
+
+#grabarBtn:disabled { 
+        background-color: #ccc; 
+        cursor: not-allowed; 
+}
+
+#preguntasList { 
+        margin-top: 20px; 
+}
